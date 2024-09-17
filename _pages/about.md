@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a first PHD student at the ISIR Lab in Sorbonne University working on Machine Learning-based Precision Medecine tools for Early Detection of Neuro-Developmental Disorders. I graduated from Sorbonne University in 2022 majoring in Robotics and Intelligent Systems. Prior to that, I pursued studies in Electronics & Electrical Engineering at Sorbonne University.
+I'm a third year PHD student at the ISIR Lab in Sorbonne University working on Machine Learning-based Precision Medecine tools for Early Detection of Neuro-Developmental Disorders. I graduated from Sorbonne University in 2022 majoring in Robotics and Intelligent Systems. Prior to that, I pursued studies in Electronics & Electrical Engineering at Sorbonne University.
 
 My current research revolves around learning discrete representations of so called *strong modalities* that could serve as grounding modalities in a multimodal framework.
 
