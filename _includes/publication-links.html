@@ -1,0 +1,20 @@
+{% comment %}
+  Renders the "Recommended citation" line and download/view links for a
+  publication-like item (post or page). Recognized fields: citation,
+  paperurl, arxiv, slidesurl, bibtexurl.
+  Usage: {% include publication-links.html item=post %}
+         {% include publication-links.html item=page small=true %}
+{% endcomment %}
+{% assign item = include.item %}
+{% capture links %}
+  {% if item.paperurl %}<a href="{{ item.paperurl }}">Download Paper</a>{% endif %}
+  {% if item.arxiv %}{% if item.paperurl %} | {% endif %}<a href="{{ item.arxiv }}">View on arXiv</a>{% endif %}
+  {% if item.slidesurl %}{% if item.paperurl or item.arxiv %} | {% endif %}<a href="{{ item.slidesurl }}">Download Slides</a>{% endif %}
+  {% if item.bibtexurl %}{% if item.paperurl or item.arxiv or item.slidesurl %} | {% endif %}<a href="{{ item.bibtexurl }}">Download Bibtex</a>{% endif %}
+{% endcapture %}
+{% assign links = links | strip %}
+{% if item.citation or links != "" %}
+  <p{% if include.small %} style="font-size: smaller"{% endif %}>
+    {% if item.citation %}Recommended citation: {{ item.citation }}{% if links != "" %}<br />{% endif %}{% endif %}{{ links }}
+  </p>
+{% endif %}
